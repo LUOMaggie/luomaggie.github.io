@@ -1,11 +1,45 @@
 
-
+@font-face {
+    font-family: "Playfair-Display";
+    src: url("PlayfairDisplay-Italic-VariableFont_wght.ttf") format("truetype"),
+    url("PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
+}
 
 body, html
 {
     padding: 0px;
     margin: 0px;
+    height: 100%;
 }
+
+
+
+
+
+body
+{
+    background-image: url("../images/planete-bocal-feuille.jpg");
+    backdrop-filter: grayscale(40%) blur(5px);
+    z-index: 1;
+    /* contain: strict; */
+}
+
+
+
+
+
+#big-spacer
+{
+    /* background-color: aliceblue; */
+    height: 100%;
+}
+
+
+
+
+
+
+
 
 
 
@@ -15,11 +49,18 @@ body > footer
     flex-direction: row;
     flex-wrap: wrap-reverse;
     background-color:beige;
-    /* position: fixed; */
-    bottom: 0;
     left: 0;
-    width: 100%;
+    max-width: 100%;
+    font-family: "Playfair-Display", cursive;
+    row-gap: 0px;
 }
+
+
+
+
+
+
+
 
 
 
@@ -28,11 +69,26 @@ body > footer
 
 #about
 {
-    flex: 1 5 50px;
-    padding: 10px;
-    padding-top: 0px;
+    flex: 1 5 300px;
+    padding: 30px;
+    /* padding-top: 0px; */
     min-width: 150px;
 }
+
+
+
+
+
+
+
+#about h3
+{
+    font-size: 1.5em;
+}
+
+
+
+
 
 
 
@@ -43,15 +99,61 @@ body > footer
 
 #contact
 {
-    flex: 2 1 50px;
-    border-left: 1.5px solid;
-    padding-left: 25px;
     border-image: linear-gradient(0deg, beige, beige, #707070, #707070, #707070, beige, beige);
     border-image-slice: 1;
-    margin-left: -4px;
+
+    flex: 3 1 350px;
+    border-left: 1px solid;
+    padding-left: 4px;
+    /* min-width: 220px; */
+    margin-left: -5px;
     overflow: hidden;
-    min-width: 250px;
+
+
+    background-color: beige;
 }
+
+
+
+#contact > div
+{
+    border-image: linear-gradient(90deg, beige, beige, #707070, #707070, #707070, beige, beige);
+    border-image-slice: 1;
+    border-bottom: 1px solid;
+
+    padding: 30px;
+}
+
+
+
+
+
+
+#mail
+{
+    font-style: normal;
+    font-weight: 700;
+    font-size: large;
+}
+
+
+
+.anti-wrap-span
+{
+    white-space: nowrap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
