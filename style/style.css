@@ -1,273 +1,134 @@
-
 @font-face {
-    font-family: "Playfair-Display";
-    src: url("../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf") format("truetype"),
-    url("../fonts/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
+  font-family: "Playfair-Display";
+  src: url("../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf") format("truetype"), url("../fonts/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
+}
+html {
+  --body-margin: 0px;
+}
+html body {
+  padding: 0px;
+  margin: var(--body-margin); /* margin: 0px; */
+}
+html body #parallax-l1 {
+  overflow: hidden;
+  height: 100vh;
+}
+html body #parallax-l1 #parallax-l2 {
+  height: calc(100vh - var(--body-margin) * 2);
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 1px;
+  perspective-origin: center;
+  /* height: 120vh; */
+  /* 
+  #img-wrapper
+  {
+      max-height: 100vh;
+  } */
+  /* #parallax-l3a
+  {
+      z-index: -3;
+      transform: translateZ(-3px) scale(2);
+  }
+  #parallax-l3b
+  {
+      background-color: rosybrown;
+  }
+  #parallax-l3c
+
+  {
+      transform: translateZ(0.5px) scale(0.5) translateX(-302.5px);
+      background-color: aliceblue;
+  } */
+}
+html body #parallax-l1 #parallax-l2 .parallax-l3-c {
+  z-index: 1;
+  /* height: 100vh; */
+  position: relative;
+}
+html body #parallax-l1 #parallax-l2 footer {
+  height: unset;
+  position: relative;
+  /*  transform: translateZ(-3px)scale(0.5) translateX(-302.5px) */
+  /* z-index: -1; */
+  background-color: beige;
+  /* height: 30%; */
+  /* width: 40vw; */
+  /* overflow: hidden; */
+  margin-top: 0vh;
+  /* margin-top: 150vh; */
+}
+html body #parallax-l1 #parallax-l2 #img-wrapper {
+  /* max- */
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  transform: translateZ(-1px) scale(2);
+  background-color: rgb(138, 102, 59);
+  position: relative;
+  text-align: center;
 }
 
-
-html
-{
-    overflow: hidden;
+#img1 {
+  transform: translateZ(-3px) scale(4);
+  position: relative;
+  /* object-fit: cover; */
+  /* width: 100%; */
+  max-height: 100vh;
+  /* margin-bottom: -250vh; */
+  overflow: hidden;
+  z-index: -2;
 }
 
-
-
-
-body, html
-{
-    padding: 0px;
-    margin: 0px;
+#img2 {
+  filter: sepia(50%);
+  position: relative;
+  max-height: 100vh;
 }
 
-
-
-
-
-body
-{
-    
-    perspective: 1px;
-    transform-style: preserve-3d;
-    overflow-x:hidden;
-    overflow-y:auto;
-    height: 100vh;
+#footer-wrapper {
+  display: flex;
+  flex-flow: row wrap-reverse;
+  align-items: stretch;
+  overflow: hidden;
 }
 
-
-
-
-
-
-
-
-/* #parallax-test
-{ */
-    /* background-image: url("../images/planete-bocal-feuille.jpg");
-    background-repeat: no-repeat;
-    backdrop-filter: grayscale(40%) blur(5px); */
-    /* z-index: 1; */
-    /* contain: strict; */
-    /* perspective-origin: center; */
-    /* perspective-origin: center 970.9px; */
-    /* margin: 0; */
-    /* font-size: 26px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
-    /* color: #ffffff; */
-    /* overflow: auto; */
-/* } */
-
-
-
-
-
-
-
-#image-wrapper
-{
-    /* perspective: 300px;
-    -webkit-perspective: 300px;
-    height: 300vh;
-    width: 100%;
-    overflow-y: auto;
-    overflow-x: hidden;
-    transform-style: preserve-3d; */
-
-    /* 
-    width: 100vw;
-    height:100vh;
-    padding-top:20vh;
-    box-sizing: border-box;
-    transform-style: preserve-3d; */
-    
+#about {
+  flex: 1 5 300px;
+  padding: 30px;
+  min-width: 150px;
 }
 
-
-#image-wrapper::before
-{
-    content: url("../images/planete-bocal-feuille.jpg");
-    /* width: 100vw; */
-    height: 100vh;
-    top:0;
-    left:0;
-    /* background-image: url("../images/planete-bocal-feuille.jpg"); */
-    position: absolute;
-    z-index: -1;
-    transform:translateZ(-1px) scale(2);
+#about h3 {
+  font-size: 1.5em;
 }
 
-
-
-
-
-#iw2
-{
-    transform: /* translate3d(973px, 1320px, -800px) */ /* rotateY(013deg) */ translateZ(-600px) scale(3);
-    margin: 0;
-    padding: 0;
-
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+#contact {
+  -o-border-image: linear-gradient(0deg, beige, beige, #707070, #707070, #707070, beige, beige);
+     border-image: linear-gradient(0deg, beige, beige, #707070, #707070, #707070, beige, beige);
+  border-image-slice: 1;
+  flex: 3 1 350px;
+  border-left: 1px solid;
+  padding-left: 4px;
+  margin-left: -5px;
+  overflow: hidden;
+  background-color: beige;
 }
 
-
-
-
-#image-spacer
-{
-
-
-    height: 100vh;
-    object-fit: scale-down;
-    /* transform-origin: 100% 100%; */ 
-    /* background-color: bisque; */
-    /* transition: transform 2s linear; */
-    
+#contact > div {
+  -o-border-image: linear-gradient(90deg, beige, beige, #707070, #707070, #707070, beige, beige);
+     border-image: linear-gradient(90deg, beige, beige, #707070, #707070, #707070, beige, beige);
+  border-image-slice: 1;
+  border-bottom: 1px solid;
+  padding: 30px;
 }
 
-
-
-
-
-footer
-{
-    
-    width: 100vw;
-    height:100vh;
-    padding-top:20vh;
-    box-sizing: border-box;
-    transform-style: preserve-3d;
-
-
-    transition: transform 2s linear, scale 2s linear, translate 2s linear;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap-reverse;
-    background-color:beige;
-    left: 0;
-    max-width: 100%;
-    font-family: "Playfair-Display", cursive;
-    box-shadow: 0px -3px 5px #707070;
-    transform-style: preserve-3d;
+#mail {
+  font-style: normal;
+  font-weight: 700;
+  font-size: large;
 }
 
-
-
-/* 
-footer:hover
-{
-    transform: translateZ(-600px);
-    translate: 0 0 -600px;
-    color: blue;
-}
- */
-
-
-
-/* 
-
-footer:active
-{
-    background-color: red;
-    scale: 3;
-}
-
- */
-
-
-
-
-
-
-#about
-{
-    flex: 1 5 300px;
-    padding: 30px;
-    min-width: 150px;
-}
-
-
-
-
-
-
-
-#about h3
-{
-    font-size: 1.5em;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-#contact
-{
-    border-image: linear-gradient(0deg, beige, beige, #707070, #707070, #707070, beige, beige);
-    border-image-slice: 1;
-
-    flex: 3 1 350px;
-    border-left: 1px solid;
-    padding-left: 4px;
-    /* min-width: 220px; */
-    margin-left: -5px;
-    overflow: hidden;
-
-
-    background-color: beige;
-}
-
-
-
-#contact > div
-{
-    border-image: linear-gradient(90deg, beige, beige, #707070, #707070, #707070, beige, beige);
-    border-image-slice: 1;
-    border-bottom: 1px solid;
-
-    padding: 30px;
-}
-
-
-
-
-
-
-#mail
-{
-    font-style: normal;
-    font-weight: 700;
-    font-size: large;
-}
-
-
-
-.anti-wrap-span
-{
-    white-space: nowrap;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.anti-wrap-span {
+  white-space: nowrap;
+}/*# sourceMappingURL=style.css.map */

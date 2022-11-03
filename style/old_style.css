@@ -1,0 +1,174 @@
+
+
+@font-face {
+    font-family: "Playfair-Display";
+    src: url("../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf") format("truetype"),
+    url("../fonts/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
+}
+
+
+html
+{
+    overflow: hidden;
+}
+
+
+
+
+body, html
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+
+
+
+body
+{
+    
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x:hidden;
+    overflow-y:auto;
+    height: 100vh;
+}
+
+
+
+
+footer::before
+{
+    content: url("../images/planete-bocal-feuille-old.jpg");
+    /* width: 100vw; */
+    height: 100vh;
+    top:0;
+    left:0;
+    /* background-image: url("../images/planete-bocal-feuille.jpg"); */
+    position: absolute;
+    z-index: -1;
+    transform:translateZ(-1px) scale(2);
+}
+
+
+
+
+footer
+{
+    width: 100vw;
+    /* height:20vh; */
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+
+
+    /* flex-direction: row;
+    flex-wrap: wrap-reverse; */
+    background-color:beige;
+    position: absolute;
+    /* top: 100vh; */
+    bottom: calc(0% - 100vh);
+    left: 0;
+    max-width: 100%;
+    font-family: "Playfair-Display", cursive;
+    box-shadow: 0px -3px 5px #707070;
+}
+
+
+
+
+
+#footer-wrapper
+{
+    display: flex;
+    flex-flow: row wrap-reverse;
+    align-items: stretch;
+    overflow: hidden;
+
+}
+
+
+
+
+
+
+#about
+{
+    flex: 1 5 300px;
+    padding: 30px;
+    min-width: 150px;
+}
+
+
+
+
+
+
+
+#about h3
+{
+    font-size: 1.5em;
+}
+
+
+
+
+#contact
+{
+    border-image: linear-gradient(0deg, beige, beige, #707070, #707070, #707070, beige, beige);
+    border-image-slice: 1;
+
+    flex: 3 1 350px;
+    border-left: 1px solid;
+    padding-left: 4px;
+    /* min-width: 220px; */
+    margin-left: -5px;
+    overflow: hidden;
+
+    background-color: beige;
+}
+
+
+
+#contact > div
+{
+    border-image: linear-gradient(90deg, beige, beige, #707070, #707070, #707070, beige, beige);
+    border-image-slice: 1;
+    border-bottom: 1px solid;
+
+    padding: 30px;
+}
+
+
+
+
+
+
+#mail
+{
+    font-style: normal;
+    font-weight: 700;
+    font-size: large;
+}
+
+
+
+.anti-wrap-span
+{
+    white-space: nowrap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
