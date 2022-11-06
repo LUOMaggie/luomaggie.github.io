@@ -9,42 +9,46 @@
     <title>Coucou toi</title>
     <link rel="icon" type="image/x-icon" href="./images/favicon.svg">
     <link rel="stylesheet" href="style/style.css">
+    <script src="./scripts/script.js" defer async></script>
 </head>
 
 
-<body>
-    <div id="parallax-l1">
-        <div id="parallax-l2">
+<body ondblclick="toggleNavAffiche(event)">
+    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="http://">Mes articles</a></li>
+                <li><a href="http://">Mes recherches</a></li>
+                <li><a href="http://">Mes commentaires</a></li>
+                <li><a href="http://">Le reste</a></li>
+            </ul>
+        </nav>
+    </header>
 
-            <div id="img-wrapper-1">
-                <img id="img1" src="./images/planete-bocal-feuille.jpg" alt="">
-            </div>
-
-            <footer>
-                <div id="footer-insider">
-                    <section id="about">
-                        <h3>About :</h3>
-                        <p>This the little website created by J&J for J.</p>
-                    </section>
-        
-                    <article id="contact">
-                        <div>
-                            <h2>You can contact</h2>
-                            <p>You can contact me at the adress&nbsp;:</p>
-                            <address>
-                                <span id="mail" class="anti-wrap-span">maggiexin1009@hotmail.com&nbsp;:</span>
-                                <span class="anti-wrap-span"><a href="mailto:maggiexin1009@hotmail.com">Send a mail.</a></span>
-                            </address>
-                        </div>
-                    </article>
-                </div>
-            </footer>
-
-            <!-- <div id="img-wrapper-2">
-                <img id="img2" src="./images/palette-maison.jpg" alt="">
-            </div> -->
-        </div>
+    <div id="img-wrapper-1">
+        <img id="img1" src="./images/planete-bocal-feuille.jpg" alt="">
     </div>
+
+    <footer>
+        <div id="footer-insider">
+            <section id="about">
+                <h3>About :</h3>
+                <p>This the little website created by J&J for J.</p>
+            </section>
+
+            <article id="contact">
+                <div>
+                    <h2>You can contact</h2>
+                    <p>You can contact me at the adress&nbsp;:</p>
+                    <address>
+                        <span id="mail" class="anti-wrap-span">maggiexin1009@hotmail.com&nbsp;:</span>
+                        <span class="anti-wrap-span"><a href="mailto:maggiexin1009@hotmail.com">Send a mail.</a></span>
+                    </address>
+                </div>
+            </article>
+        </div>
+    </footer>
 
 </body>
 
